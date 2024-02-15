@@ -1,0 +1,14 @@
+/home/liam/Git/MiniGolf/obj/Debug/net8.0/MiniGolf.GeneratedMSBuildEditorConfig.editorconfig
+/home/liam/Git/MiniGolf/obj/Debug/net8.0/MiniGolf.AssemblyInfoInputs.cache
+/home/liam/Git/MiniGolf/obj/Debug/net8.0/MiniGolf.AssemblyInfo.cs
+/home/liam/Git/MiniGolf/obj/Debug/net8.0/MiniGolf.csproj.CoreCompileInputs.cache
+/home/liam/Git/MiniGolf/bin/Debug/net8.0/MiniGolf
+/home/liam/Git/MiniGolf/bin/Debug/net8.0/MiniGolf.deps.json
+/home/liam/Git/MiniGolf/bin/Debug/net8.0/MiniGolf.runtimeconfig.json
+/home/liam/Git/MiniGolf/bin/Debug/net8.0/MiniGolf.dll
+/home/liam/Git/MiniGolf/bin/Debug/net8.0/MiniGolf.pdb
+/home/liam/Git/MiniGolf/obj/Debug/net8.0/MiniGolf.dll
+/home/liam/Git/MiniGolf/obj/Debug/net8.0/refint/MiniGolf.dll
+/home/liam/Git/MiniGolf/obj/Debug/net8.0/MiniGolf.pdb
+/home/liam/Git/MiniGolf/obj/Debug/net8.0/MiniGolf.genruntimeconfig.cache
+/home/liam/Git/MiniGolf/obj/Debug/net8.0/ref/MiniGolf.dll
