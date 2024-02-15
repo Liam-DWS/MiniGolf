@@ -27,7 +27,7 @@ class Program{
                         {
                             playerCount = 2;
                             Methods.SetTestScore(scoreCards, playerCount);
-                            Console.WriteLine("Not enough players to start game");
+                            Console.WriteLine("Not enough players to start game, inserting test data");
                         }
                         break;
                     case "3":

@@ -78,25 +78,9 @@ static public class Methods{
         }
     }
 
-    /*public static void SetTestScore(int playerCount, ScoreCard[] scoreCards){
-        scoreCards[0] = new ScoreCard("Jeff");
-        for(int i = 0; i < Constants.NumberOfHoles; i++){
-            scoreCards[0].EnterScore(i + 1, 1);
-        }
-        scoreCards[1] = new ScoreCard("Tim");
-        for(int i = 0; i < Constants.NumberOfHoles; i++){
-            scoreCards[1].EnterScore(i + 1, 1);
-        }
-        scoreCards[1].EnterScore(Constants.NumberOfHoles, 2);
-        playerCount = 2;
-        Console.WriteLine("Test scores set.");
-    }*/
-
-
     // this took me a while to figure out and is overly complicated.
     public static void SetTestScore(ScoreCard[] scoreCards, int playerCount)
     {
-        //playerCount = 2; 
         scoreCards[0] = new ScoreCard("Jeff");
         for (int i = 0; i < Constants.NumberOfHoles; i++)
         {
@@ -111,17 +95,9 @@ static public class Methods{
         // The following line enters a score of 2 for the last hole,
         // which overwrites the score of 1 entered in the previous loop
         scoreCards[1].EnterScore(Constants.NumberOfHoles, 2);
-
-        // The issue is that the previous loop entered a score of 1 for every hole,
-        // including the last hole. By then entering a score of 2 for the last hole again,
-        // it is overwriting the score of 1 that was already entered.
-
-        // To fix this, we can remove the line that enters the score of 2:
-
-        // scoreCards[1].EnterScore(Constants.NumberOfHoles, 2);
-
         Console.WriteLine("Test scores set.");
     }
+    
 
 
 
@@ -180,13 +156,13 @@ static public class Methods{
                 totalScore += scoreCards[i].GetScore(j + 1);
             }
             scoreLine += $"{totalScore,totalWidth}  |";
-            Console.WriteLine(winningIndex);
+            //Console.WriteLine(winningIndex);
             // Append "*Winner*" tag next to the player with the lowest total score
             if (i == winningIndex)
             {
                 scoreLine += " *Winner*";
             }
-
+            Console.WriteLine(sepLine);
             Console.WriteLine(scoreLine);
             Console.WriteLine(sepLine);
         }
