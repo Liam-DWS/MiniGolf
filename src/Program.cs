@@ -28,18 +28,16 @@ class Program{
                         break;
                     case "3":
                         Methods.EnterScores(scoreCards, playerCount);
-                        break;
+                        break;                
                     case "4":
-                        Methods.SetTestScore(scoreCards);
-                        break;
-                    case "5":
                         Methods.DisplayScores(scoreCards, playerCount);
                         break;
-                    case "6":
+                    case "5":
                         isGameOver = true;
                         break;
                     default:
                         Console.WriteLine("Invalid input");
+                        Methods.ScoreCardTests(playerCount, 2, scoreCards);
                         break;
                 }
             }

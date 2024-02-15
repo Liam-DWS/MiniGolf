@@ -30,7 +30,7 @@ public class ScoreCard{
     }
 
     public void SetTestScore(){
-        this.SetTestScore = SetTestScore();
+        this._SetTestScore = SetTestScore();
     } 
 
 
