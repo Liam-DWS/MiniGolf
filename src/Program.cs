@@ -37,7 +37,7 @@ class Program{
                         break;
                     default:
                         Console.WriteLine("Invalid input");
-                        Methods.ScoreCardTests(playerCount, 2, scoreCards);
+                        Methods.SetTestScore(playerCount, 2, scoreCards);ScoreCardTests
                         break;
                 }
             }
