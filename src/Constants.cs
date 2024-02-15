@@ -1,4 +1,4 @@
-namespace test;
+namespace game;
 
 public static class Constants{
     public const int NumberOfHoles = 18; // Total number of holes in the game
