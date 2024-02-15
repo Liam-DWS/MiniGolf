@@ -108,7 +108,7 @@ static public class Methods{
         // Manually calculating total scores and finding the winning player
         // This approach, while instructive for understanding array manipulation and data handling,
         // is O(n^2) and not the most efficient. Using .Min() and .Sum() would offer an optimized O(n) solution.
-        int lowestTotalScore = Contrants.NumberOfHoles * Constrants.MaxScorePerHole;
+        int lowestTotalScore = Constants.NumberOfHoles * Constants.MaxScorePerHole;
         int winningIndex = -1;
         for (int i = 0; i < playerCount; i++)
         {

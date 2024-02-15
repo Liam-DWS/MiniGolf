@@ -32,14 +32,14 @@ public class ScoreCard{
     public void SetTestScore(int holeNum, int score){
         ScoreCard[] scoreCards = new ScoreCard[2];
         scoreCards[0] = new ScoreCard("Jeff");
-        for(int i = 0; i < Contants.NumberOfHoles; i++){
+        for(int i = 0; i < Constants.NumberOfHoles; i++){
             scoreCards[0].EnterScore(i + 1, 1);
         }
         scoreCards[1] = new ScoreCard("Tim");
-        for(int i = 0; i < Contants.NumberOfHoles; i++){
+        for(int i = 0; i < Constants.NumberOfHoles; i++){
             scoreCards[1].EnterScore(i + 1, 1);
         }
-        scoreCards[1].EnterScore(Contants.NumberOfHoles, 2);
+        scoreCards[1].EnterScore(Constants.NumberOfHoles, 2);
     }
 
 
