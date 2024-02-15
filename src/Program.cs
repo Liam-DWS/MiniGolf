@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace test;
+namespace game;
 
 class Program{
         static void Main(string[] args){

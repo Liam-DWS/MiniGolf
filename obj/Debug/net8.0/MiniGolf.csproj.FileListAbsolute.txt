@@ -12,3 +12,4 @@
 /home/liam/Git/MiniGolf/obj/Debug/net8.0/MiniGolf.pdb
 /home/liam/Git/MiniGolf/obj/Debug/net8.0/MiniGolf.genruntimeconfig.cache
 /home/liam/Git/MiniGolf/obj/Debug/net8.0/ref/MiniGolf.dll
+/home/liam/Git/MiniGolf/obj/Debug/net8.0/MiniGolf.sourcelink.json

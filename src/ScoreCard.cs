@@ -1,4 +1,4 @@
-namespace test;
+namespace game;
 public class ScoreCard{
     //properties
     private string _playerName;

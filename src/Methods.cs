@@ -1,4 +1,4 @@
-namespace test;
+namespace game;
 
 static public class Methods{
 
