@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MiniGolf")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+26c3462242148d3c93415977b5c0b3175d850a26")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2c19f3ab384f079dd269a832a6af1f3d12dde62c")]
 [assembly: System.Reflection.AssemblyProductAttribute("MiniGolf")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MiniGolf")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

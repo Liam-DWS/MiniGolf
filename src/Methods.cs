@@ -79,7 +79,7 @@ static public class Methods{
     }
 
     public static void SetTestScore(){
-        ScoreCard.scoreCards = new ScoreCard.ScoreCard[2];
+        SetTestScore();
         Console.WriteLine("Test scores set.");
     }
 

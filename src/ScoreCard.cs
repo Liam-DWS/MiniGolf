@@ -29,7 +29,7 @@ public class ScoreCard{
         }
     }
 
-    public void SetTestScore(int holeNum, int score){
+    public void SetTestScore(){
         ScoreCard[] scoreCards = new ScoreCard[2];
         scoreCards[0] = new ScoreCard("Jeff");
         for(int i = 0; i < Constants.NumberOfHoles; i++){
