@@ -30,9 +30,12 @@ class Program{
                         Methods.EnterScores(scoreCards, playerCount);
                         break;
                     case "4":
-                        Methods.DisplayScores(scoreCards, playerCount);
+                        Methods.ScoreCardTests(scoreCards);
                         break;
                     case "5":
+                        Methods.DisplayScores(scoreCards, playerCount);
+                        break;
+                    case "6":
                         isGameOver = true;
                         break;
                     default:

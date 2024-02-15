@@ -2,7 +2,7 @@ namespace test;
 public class ScoreCard{
     //properties
     private string _playerName;
-    private int[] _scores = new int[18];
+    private int[] _scores = new int[Constrants.NumberOfHoles];
 
     //constructor
     public ScoreCard(string playerName){
@@ -28,6 +28,21 @@ public class ScoreCard{
             Console.WriteLine("Invalid score or hole number.");
         }
     }
+
+    public void SetTestScore(int holeNum, int score){
+        ScoreCard[] scoreCards = new ScoreCard[2];
+        scoreCards[0] = new ScoreCard("Jeff");
+        for(int i = 0; i < Contrants.NumberOfHoles; i++){
+            scoreCards[0].EnterScore(i + 1, 1);
+        }
+        scoreCards[1] = new ScoreCard("Tim");
+        for(int i = 0; i < Contrants.NumberOfHoles; i++){
+            scoreCards[1].EnterScore(i + 1, 1);
+        }
+        scoreCards[1].EnterScore(Contrants.NumberOfHoles, 2);
+    }
+
+
     public int TotalScore(){
         return _scores.Sum();
     }
@@ -55,23 +70,3 @@ public class ScoreCard{
         set {_playerName = value;}
     }
 }
-
-
-/*Test data
-ScoreCard sc = new ScoreCard("Jeff");
-Assert.AreEqual(0, sc.TotalScore());
-
-sc.EnterScore(1, 1); // valid
-sc.EnterScore(2, 6); // invalid
-Assert.AreEqual(3,sc.GetScore(1));
-Assert.AreEqual(5,sc.GetScore(2));
-
-sc.EnterScore(3, 4); 
-Assert.AreEqual(12, sc.TotalScore());
-
-sc.ResetScore();
-Assert.AreEqual(0, sc.TotalScore());
-
-sc.EnterScore(5, 4);
-Assert.AreEqual(4, sc.GetScore(5));
-*/
