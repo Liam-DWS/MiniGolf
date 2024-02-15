@@ -78,8 +78,18 @@ static public class Methods{
         }
     }
 
-    public static void SetTestScore(){
-        SetTestScore();
+    public static void SetTestScore(ScoreCard[] scoreCards){
+        ScoreCard[] scoreCards = new ScoreCard[2];
+        scoreCards[0] = new ScoreCard("Jeff");
+        for(int i = 0; i < Constants.NumberOfHoles; i++){
+            scoreCards[0].EnterScore(i + 1, 1);
+        }
+        scoreCards[1] = new ScoreCard("Tim");
+        for(int i = 0; i < Constants.NumberOfHoles; i++){
+            scoreCards[1].EnterScore(i + 1, 1);
+        }
+        scoreCards[1].EnterScore(Constants.NumberOfHoles, 2);
+    
         Console.WriteLine("Test scores set.");
     }
 

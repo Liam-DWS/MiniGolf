@@ -30,7 +30,7 @@ class Program{
                         Methods.EnterScores(scoreCards, playerCount);
                         break;
                     case "4":
-                        Methods.SetTestScore();
+                        Methods.SetTestScore(scoreCards);
                         break;
                     case "5":
                         Methods.DisplayScores(scoreCards, playerCount);

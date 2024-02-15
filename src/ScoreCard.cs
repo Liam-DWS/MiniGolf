@@ -30,17 +30,8 @@ public class ScoreCard{
     }
 
     public void SetTestScore(){
-        ScoreCard[] scoreCards = new ScoreCard[2];
-        scoreCards[0] = new ScoreCard("Jeff");
-        for(int i = 0; i < Constants.NumberOfHoles; i++){
-            scoreCards[0].EnterScore(i + 1, 1);
-        }
-        scoreCards[1] = new ScoreCard("Tim");
-        for(int i = 0; i < Constants.NumberOfHoles; i++){
-            scoreCards[1].EnterScore(i + 1, 1);
-        }
-        scoreCards[1].EnterScore(Constants.NumberOfHoles, 2);
-    }
+        this.SetTestScore = SetTestScore();
+    } 
 
 
     public int TotalScore(){
