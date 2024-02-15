@@ -2,7 +2,7 @@ namespace game;
 public class ScoreCard{
     //properties
     private string _playerName;
-    private int[] _scores = new int[Constrants.NumberOfHoles];
+    private int[] _scores = new int[Constants.NumberOfHoles];
 
     //constructor
     public ScoreCard(string playerName){
@@ -32,14 +32,14 @@ public class ScoreCard{
     public void SetTestScore(int holeNum, int score){
         ScoreCard[] scoreCards = new ScoreCard[2];
         scoreCards[0] = new ScoreCard("Jeff");
-        for(int i = 0; i < Contrants.NumberOfHoles; i++){
+        for(int i = 0; i < Contants.NumberOfHoles; i++){
             scoreCards[0].EnterScore(i + 1, 1);
         }
         scoreCards[1] = new ScoreCard("Tim");
-        for(int i = 0; i < Contrants.NumberOfHoles; i++){
+        for(int i = 0; i < Contants.NumberOfHoles; i++){
             scoreCards[1].EnterScore(i + 1, 1);
         }
-        scoreCards[1].EnterScore(Contrants.NumberOfHoles, 2);
+        scoreCards[1].EnterScore(Contants.NumberOfHoles, 2);
     }
 
 
