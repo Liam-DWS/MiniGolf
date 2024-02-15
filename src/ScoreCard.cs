@@ -29,11 +29,6 @@ public class ScoreCard{
         }
     }
 
-    public void SetTestScore(){
-        this._SetTestScore = SetTestScore();
-    } 
-
-
     public int TotalScore(){
         return _scores.Sum();
     }

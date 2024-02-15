@@ -34,7 +34,7 @@ static public class Methods{
         }
     }
 
-    public static void StartGame(int playerCount, ScoreCard[] scoreCards){
+    public static void StartGame(ScoreCard[] scoreCards, int playerCount){
         if (playerCount <= 0 || scoreCards == null){
             throw new ArgumentException("Invalid input");
         }
@@ -78,7 +78,7 @@ static public class Methods{
         }
     }
 
-    public static void SetTestScore(ScoreCard[] scoreCards){
+    /*public static void SetTestScore(int playerCount, ScoreCard[] scoreCards){
         scoreCards[0] = new ScoreCard("Jeff");
         for(int i = 0; i < Constants.NumberOfHoles; i++){
             scoreCards[0].EnterScore(i + 1, 1);
@@ -88,12 +88,44 @@ static public class Methods{
             scoreCards[1].EnterScore(i + 1, 1);
         }
         scoreCards[1].EnterScore(Constants.NumberOfHoles, 2);
-    
+        playerCount = 2;
+        Console.WriteLine("Test scores set.");
+    }*/
+
+
+    // this took me a while to figure out and is overly complicated.
+    public static void SetTestScore(ScoreCard[] scoreCards, int playerCount)
+    {
+        //playerCount = 2; 
+        scoreCards[0] = new ScoreCard("Jeff");
+        for (int i = 0; i < Constants.NumberOfHoles; i++)
+        {
+            scoreCards[0].EnterScore(i + 1, 1);
+        }
+
+        scoreCards[1] = new ScoreCard("Tim");
+        for (int i = 0; i < Constants.NumberOfHoles; i++)
+        {
+            scoreCards[1].EnterScore(i + 1, 1);
+        }
+        // The following line enters a score of 2 for the last hole,
+        // which overwrites the score of 1 entered in the previous loop
+        scoreCards[1].EnterScore(Constants.NumberOfHoles, 2);
+
+        // The issue is that the previous loop entered a score of 1 for every hole,
+        // including the last hole. By then entering a score of 2 for the last hole again,
+        // it is overwriting the score of 1 that was already entered.
+
+        // To fix this, we can remove the line that enters the score of 2:
+
+        // scoreCards[1].EnterScore(Constants.NumberOfHoles, 2);
+
         Console.WriteLine("Test scores set.");
     }
 
 
-    // this took me a while to figure out and is overly complicated.
+
+ // this took me a while to figure out and is overly complicated.
     public static void DisplayScores(ScoreCard[] scoreCards, int playerCount)
     {
         // Constants for formatting
@@ -147,7 +179,7 @@ static public class Methods{
             {
                 totalScore += scoreCards[i].GetScore(j + 1);
             }
-            scoreLine += $"{totalScore,totalWidth}|";
+            scoreLine += $"{totalScore,totalWidth}  |";
             Console.WriteLine(winningIndex);
             // Append "*Winner*" tag next to the player with the lowest total score
             if (i == winningIndex)
@@ -166,9 +198,8 @@ static public class Methods{
         Console.WriteLine("1. Add Player");
         Console.WriteLine("2. Start Game");
         Console.WriteLine("3. Enter Scores");
-        Console.WriteLine("4. Set Test Scores");
-        Console.WriteLine("5. Display Scores");
-        Console.WriteLine("6. Exit");
+        Console.WriteLine("4. Display Scores");
+        Console.WriteLine("5. Exit");
         Console.Write("Enter a number: ");
     }
 }
