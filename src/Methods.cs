@@ -78,8 +78,8 @@ static public class Methods{
         }
     }
 
-    public static void ScoreCardTests(){
-        ScoreCardTests();
+    public static void SetTestScore(){
+        ScoreCard[] scoreCards = new ScoreCard[2];        
         Console.WriteLine("Test scores set.");
     }
 
