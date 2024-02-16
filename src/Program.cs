@@ -7,6 +7,7 @@ class Program{
         static void Main(string[] args){
             // Instantiate ScoreCard
             bool isGameOver = false;
+            bool GameinProgress = false;
             int  playerCount = 0;
             ScoreCard[] scoreCards = new ScoreCard[Constants.MaxPlayers];
 
@@ -21,7 +22,8 @@ class Program{
                     case "2":
                         if (playerCount >= 2)
                         {
-                            Methods.StartGame(scoreCards, playerCount);
+                            Methods.StartGame(scoreCards, playerCount, ref GameinProgress);
+                            break;
                         }
                         else
                         {
@@ -31,8 +33,9 @@ class Program{
                         }
                         break;
                     case "3":
-                        Methods.ResetGame(ref scoreCards, ref playerCount);
-                        Console.WriteLine("Scores reset?");
+                        Methods.ResetGame(ref scoreCards, ref playerCount,ref GameinProgress);
+                        Console.WriteLine("Game Reset enter players");
+                        Console.WriteLine("boolean: {0}", GameinProgress);
                         break;
                     case "4":
                         Methods.ResetScore_currentGame(scoreCards);

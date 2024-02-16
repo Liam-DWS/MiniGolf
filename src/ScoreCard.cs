@@ -21,7 +21,7 @@ public class ScoreCard{
         int holeIndex = holeNum - 1;
 
         // Validate hole number and score together correctly
-        if(holeIndex >= 0 && holeIndex <= 17 && score >= 1 && score <= 5){
+        if(holeIndex >= 0 && holeIndex <= Constants.NumberOfHoles - 1 && score >= 1 && score <= 5){
             _scores[holeIndex] = score; 
         }
         else{
@@ -42,7 +42,7 @@ public class ScoreCard{
     public int GetScore(int holeNum){
         // Adjust holeN to be 0-based
         int holeIndex = holeNum - 1;
-        if(holeIndex >= 0 && holeIndex <= 17){
+        if(holeIndex >= 0 && holeIndex <= Constants.NumberOfHoles - 1){
             return _scores[holeIndex];
         }
         else{

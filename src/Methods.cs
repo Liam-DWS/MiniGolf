@@ -34,26 +34,50 @@ static public class Methods{
         }
     }
 
-    public static void StartGame(ScoreCard[] scoreCards, int playerCount){
-        if (playerCount <= 0 || scoreCards == null){
-            throw new ArgumentException("Invalid input");
+        public static void StartGame(ScoreCard[] scoreCards, int playerCount, ref bool GameInProgress){
+        bool validInput = false;
+        while (!validInput) {
+            Console.WriteLine("Game already in progress, would you like to reset scores? (S/N for no action)");
+            string? response = Console.ReadLine()?.ToUpper();
+            switch (response) {
+                case "S":
+                    ResetScore_currentGame(scoreCards);
+                    Console.WriteLine("Scores reset.");
+                    validInput = true;
+                    break;
+                /*case "G":
+                    Console.WriteLine("Resetting Game");
+                    ResetGame(ref scoreCards, ref playerCount, ref GameInProgress);                  
+                    Console.WriteLine("Game Reset, please enter players");
+                    validInput = true;
+                    break;*/
+                case "N":
+                    Console.WriteLine("Continuing Game");
+                    validInput = true;
+                    break;
+                default:
+                    Console.WriteLine("Invalid input. Please enter S or N.");
+                    break;
+            }
         }
 
-        for (int i = 0; i < playerCount; i++){
-            scoreCards[i].ResetScore();
+        if (!GameInProgress) {
+            GameInProgress = true;
+            Console.WriteLine("Game Started, scores reset.");
+            for (int i = 0; i < playerCount; i++){
+                scoreCards[i].ResetScore();    
+            }
         }
-
-        Console.WriteLine("Game Started, scores reset");
     }
+ 
 
-
-     public static void ResetGame(ref ScoreCard[] scoreCards,ref int playerCount){
+    public static void ResetGame(ref ScoreCard[] scoreCards,ref int playerCount, ref bool GameinProgress){
         // method to reset game state
         playerCount = 0;
         scoreCards = new ScoreCard[Constants.MaxPlayers];
+        GameinProgress = false;
         Console.WriteLine("Game reset");
     }
-
 
     public static void EnterScores(ScoreCard[] scoreCards, int playerCount){
         try{
