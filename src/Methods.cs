@@ -47,6 +47,14 @@ static public class Methods{
     }
 
 
+     public static void ResetGame(ref ScoreCard[] scoreCards,ref int playerCount){
+        // method to reset game state
+        playerCount = 0;
+        scoreCards = new ScoreCard[Constants.MaxPlayers];
+        Console.WriteLine("Game reset");
+    }
+
+
     public static void EnterScores(ScoreCard[] scoreCards, int playerCount){
         try{
             for (int i = 0; i < Constants.NumberOfHoles; i++){
@@ -98,7 +106,11 @@ static public class Methods{
         Console.WriteLine("Test scores set.");
     }
     
-
+    public static void ResetScore_currentGame(ScoreCard[] scoreCards){
+        foreach (ScoreCard scoreCard in scoreCards){
+            scoreCard?.ResetScore();
+        }
+    }
 
 
  // this took me a while to figure out and is overly complicated.
@@ -173,9 +185,11 @@ static public class Methods{
         Console.WriteLine("Menu");
         Console.WriteLine("1. Add Player");
         Console.WriteLine("2. Start Game");
-        Console.WriteLine("3. Enter Scores");
-        Console.WriteLine("4. Display Scores");
-        Console.WriteLine("5. Exit");
+        Console.WriteLine("3. Reset Game");
+        Console.WriteLine("4. Reset Scores");
+        Console.WriteLine("5. Enter Scores");
+        Console.WriteLine("6. Display Scores");
+        Console.WriteLine("7. Exit");
         Console.Write("Enter a number: ");
     }
 }

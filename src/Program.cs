@@ -31,12 +31,19 @@ class Program{
                         }
                         break;
                     case "3":
-                        Methods.EnterScores(scoreCards, playerCount);
+                        Methods.ResetGame(ref scoreCards, ref playerCount);
+                        Console.WriteLine("Scores reset?");
                         break;
                     case "4":
-                        Methods.DisplayScores(scoreCards, playerCount);
+                        Methods.ResetScore_currentGame(scoreCards);
                         break;
                     case "5":
+                        Methods.EnterScores(scoreCards, playerCount);
+                        break;
+                    case "6":
+                        Methods.DisplayScores(scoreCards, playerCount);
+                        break;
+                    case "7":
                         isGameOver = true;
                         break;
                     default:

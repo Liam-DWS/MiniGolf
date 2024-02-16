@@ -38,7 +38,7 @@ public class ScoreCard{
             _scores[i] = 0;
         }
     }
-
+  
     public int GetScore(int holeNum){
         // Adjust holeN to be 0-based
         int holeIndex = holeNum - 1;
