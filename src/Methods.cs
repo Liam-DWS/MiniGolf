@@ -45,7 +45,7 @@ static public class Methods{
                     Console.WriteLine("Scores reset.");
                     validInput = true;
                     break;
-                /*case "G":
+                /*case "G": //TODO: fix this
                     Console.WriteLine("Resetting Game");
                     ResetGame(ref scoreCards, ref playerCount, ref GameInProgress);                  
                     Console.WriteLine("Game Reset, please enter players");
@@ -110,7 +110,7 @@ static public class Methods{
         }
     }
 
-    // this took me a while to figure out and is overly complicated.
+    // this took me a while to figure out and feels overly complicated.
     public static void SetTestScore(ScoreCard[] scoreCards, int playerCount)
     {
         scoreCards[0] = new ScoreCard("Jeff");
@@ -137,7 +137,7 @@ static public class Methods{
     }
 
 
- // this took me a while to figure out and is overly complicated.
+ // this took me a while to figure out and feels overly complicated.
     public static void DisplayScores(ScoreCard[] scoreCards, int playerCount)
     {
         // Constants for formatting
@@ -159,8 +159,8 @@ static public class Methods{
         Console.WriteLine(sepLine);
 
         // Manually calculating total scores and finding the winning player
-        // This approach, while instructive for understanding array manipulation and data handling,
-        // is O(n^2) and not the most efficient. Using .Min() and .Sum() would offer an optimized O(n) solution.
+        // teaching myself array manipulation and data handling is O(n^2)? and not the most efficient.
+        // Using .Min() and .Sum() would offer an optimized O(n)? solution.
         int lowestTotalScore = Constants.NumberOfHoles * Constants.MaxScorePerHole;
         int winningIndex = -1;
         for (int i = 0; i < playerCount; i++)
@@ -196,7 +196,7 @@ static public class Methods{
             // Append "*Winner*" tag next to the player with the lowest total score
             if (i == winningIndex)
             {
-                scoreLine += " *Winner*";
+                scoreLine += " **Winner**";
             }
             Console.WriteLine(sepLine);
             Console.WriteLine(scoreLine);
