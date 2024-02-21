@@ -37,10 +37,10 @@ static public class Methods{
         public static void StartGame(ScoreCard[] scoreCards, int playerCount, ref bool GameInProgress){
         bool validInput = false;
         while (!validInput) {
-            Console.WriteLine("Game already in progress, would you like to reset scores? (S/N for no action)");
+            Console.WriteLine("Game already in progress, would you like to reset scores? (Y/N for no action)");
             string? response = Console.ReadLine()?.ToUpper();
             switch (response) {
-                case "S":
+                case "Y":
                     ResetScore_currentGame(scoreCards);
                     Console.WriteLine("Scores reset.");
                     validInput = true;
